@@ -1,6 +1,7 @@
 package logica;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Segundo {
 
@@ -12,10 +13,20 @@ public class Segundo {
 	
 	public void Numerar (){
 		while(i < 10) {
+			
+			try {
 			System.out.println("Digite um número:");
 			Num[i] = Leitura.nextInt();
-			i++;	}		
+			i++;	
+			}
+			
+			catch (java.util.InputMismatchException e) {
+				System.out.println("Digitar somente números!!");
+				Leitura.nextLine();
+			}
+		}
 	}
+		
 		public void Resolver() {
 			while (x> -1) {
 				
